@@ -1,10 +1,11 @@
 <div class="container">
   <div class="leftSide">
-    <app-list-item></app-list-item>
+    <h1>Notes</h1>
+    <div *ngFor="let note of notelist$ | async; let i = index">
+      <app-list-item [note]="note" [index]="i"></app-list-item>
+    </div>
   </div>
   <div class="rightSide">
-    <div *ngFor="let note of notelist$ | async; let i = index">
-      <app-input-content [note]="note" [index]="i"></app-input-content>
-    </div>
+    <app-input-content></app-input-content>
   </div>
 </div>

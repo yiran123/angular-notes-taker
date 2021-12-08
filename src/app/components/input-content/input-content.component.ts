@@ -9,8 +9,7 @@ import { NotesService } from '../../services/notes.service';
   styleUrls: ['./input-content.component.css'],
 })
 export class InputContentComponent implements OnInit {
-  @Input() note: Note;
-  @Input() index: number;
+
   constructor(private fb: FormBuilder, private notesService: NotesService) {}
   form: FormGroup;
 
@@ -25,10 +24,11 @@ export class InputContentComponent implements OnInit {
     });
   }
   onSubmit() {
+    //console.log(this.form.value);
     this.notesService.createNote(this.form.value);
     this.form.reset();
   }
   onRevert() {
-    this.form.reset();
+    // this.form.reset();
   }
 }

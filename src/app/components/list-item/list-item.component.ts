@@ -4,17 +4,17 @@ import { Note } from '../../interface/note.interface';
 @Component({
   selector: 'app-list-item',
   templateUrl: './list-item.component.html',
-  styleUrls: ['./list-item.component.css']
+  styleUrls: ['./list-item.component.css'],
 })
 export class ListItemComponent implements OnInit {
-  @Input() note!: Note;
+  @Input() note: Note;
+  @Input() index: number;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+    console.log(this.note);
   }
 
-  onSelect() {
-  }
-
+  onSelect() {}
 }
