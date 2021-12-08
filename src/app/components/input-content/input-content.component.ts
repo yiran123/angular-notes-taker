@@ -9,7 +9,6 @@ import { NotesService } from '../../services/notes.service';
   styleUrls: ['./input-content.component.css'],
 })
 export class InputContentComponent implements OnInit {
-
   constructor(private fb: FormBuilder, private notesService: NotesService) {}
   form: FormGroup;
 
